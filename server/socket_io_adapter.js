@@ -43,5 +43,5 @@ exports.listen = function(io) {
       })
     })
   })
-
+  return rooms;
 }
