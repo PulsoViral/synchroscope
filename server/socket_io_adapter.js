@@ -41,6 +41,8 @@ exports.listen = function(io) {
       socket.on('message', function(data) {
         r.connection.recv(data, c)
       })
+      if (!r.sockets) r.sockets = [];
+      r.sockets.push(socket);
     })
   })
   return rooms;
